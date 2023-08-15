@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="b.css">
+    
+    
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                
+                <ul id="sidemenu">
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">ABOUT ME</a></li>
+                    <li><a href="#services">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>    
+                </ul>
+            </nav>
+            <div class="headertext">
+                <p style="color: black;">MCA Student</p>
+                <h1 style="color: rgb(123, 124, 182);">Hi I am <span>Argha Dutta </span><br>from Meghalaya,INDIA </h1>
+            </div>
+        </div>
+    </div>    
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="D:\PXL_20220923_224102314_3-removebg-preview.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle" , style="color: white;">About Me</h1>
+                    <p style="color: rgb(123, 124, 182);">Hey there! I'm Argha, a MCA Student fueled by a passion for turning ideas into functional, elegant code.I specialize in various programming languages and technologies and have hands-on experience in web app development and backend systems. My code is all about efficiency, scalability, and clean design.I thrive in collaborative environments, working closely with cross-functional teams to bring projects to life. My knack for clear communication ensures that technical concepts are easily understood by all.</p>
+                <div class="tab-titles">
+                    
+                    <p class="tab-links active-link" onclick="opentab('skills')" , style="color: white;"> <u>Skills</u> </p>
+                    
+                    <p class="tab-links"onclick="opentab('education')" , style="color: white;"> <u>Education</u> </p>
+                </div>
+                <div class="tab-contents active-tab " id="skills">
+                    <ul>
+                        <li>Java programming</li>
+                        <li>Python</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>C Programming</li>
+                        <li>C++</li>
+                        <li>Visual Basic</li>
+                        <li>DBMS</li>
+                        <li>GoLang</li>
+                        <li>Lua Programming</li>
+                        <li>Nodejs</li>                     
+                        
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Postgraduate Degree</span><br>Christ University(2025)</li>
+                        <li><span>Undergraduate Degree </span><br>SRMIST(2023) : 9.6 CGPA</li>
+                        <li><span>Standard 12</span><br>St.Anthony's Higher Secondard School(2020) :71%(MBOSE)</li>
+                        <li><span>Standard 10 </span><br>St.Edmund's School(2018): 89.6%(ICSE)</li>
+                         
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Projects</h1>
+            <div class="services-list">
+                <div>
+                    <h2><a href="https://github.com/Argha-Dutta/q2/projects?query=is%3Aopen">Breast Cancer prediction(using python)</a></h2>
+                    <p> Cancer detection using Machine learning.</p>
+                </div>
+                <div>
+                    <h2><a href="https://github.com/Argha-Dutta/q2/projects?query=is%3Aopen">Railway Reservation System(using java)</a></h2>
+                    <p> System for booking and selecting railway tickets.</p>
+                </div>
+                <div>
+                  <h2><a href="https://github.com/Argha-Dutta/q2/projects?query=is%3Aopen">Resturant ordering system(using python)</a></h2>
+                  <p> System for reservation and tables and ordering of food.</p>
+              </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p style="font-style: italic;">argha.dutta@mca.christuniversity.in</p>
+                    <p style="font-style: italic;">1234567890</p>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="NAME" placeholder="Your name" required>
+                        <input type="email" name="EMAIL" placeholder="Your email" required>
+                        <textarea name ="MESSAGE" rows="6" placeholder="Your Message"></textarea>
+                        <button type=" submit" class="btn">submit</button>
+                    </form> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    <script>
+
+      // Smooth scrolling for navigation links
+      document.addEventListener("DOMContentLoaded", function() {
+          const navLinks = document.querySelectorAll("#sidemenu a");
+
+          navLinks.forEach(link => {
+              link.addEventListener("click", event => {
+                  event.preventDefault();
+                  const target = document.querySelector(event.target.getAttribute("href"));
+                  target.scrollIntoView({
+                      behavior: "smooth"
+                  });
+              });
+          });
+      });
+   </script>
+</body>
+</html>
